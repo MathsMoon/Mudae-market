@@ -5,5 +5,6 @@ export interface CreateUserDTO {
     haremName: string,
     haremQTD: number,
     kakeraReacted: number,
-    kakera: number
+    kakera: number,
+    mudaeActive: boolean
 }

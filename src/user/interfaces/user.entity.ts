@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm"
 
-@Entity({ name: 'mudae_users'})
+@Entity({ name: 'user'})
 export class UserEntity {
     
     //Gerando o ID como chave primária.
@@ -27,6 +27,10 @@ export class UserEntity {
     @Column({ name: 'kakera'})
     kakera: number;
 
+    @Column({ name: 'mudae_active', nullable: false })
+    mudaeActive: boolean;    
+
+    // Seção de Registro de criação e alteração do Usuário
     @CreateDateColumn({ name: 'created_at'})
     createdAt: Date;
 
