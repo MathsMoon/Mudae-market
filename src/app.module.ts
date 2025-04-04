@@ -4,6 +4,7 @@ import { UserModule } from './user/user.module';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import * as path from 'path';
+import { CardsModule } from './cards/cards.module';
 
 @Module({
   imports: [
@@ -21,7 +22,7 @@ import * as path from 'path';
     migrations: [path.join(__dirname, 'migration', '{.ts,*.js}')],
     migrationsRun: true
   }),
-  UserModule],
+  UserModule, CardsModule],
   controllers: [],
   providers: [],
 })

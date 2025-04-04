@@ -6,29 +6,20 @@ export class UserEntity {
     
     //Gerando o ID como chave primária.
     @PrimaryGeneratedColumn()
-    id: number;
+    user_id: number;
 
     //Seção das Colunas da Entidade Usuário:
     @Column({ name: 'username', nullable: false })
     username: string;
 
+    @Column({ name: 'user_email', nullable: false })
+    userEmail: string;
+
     @Column({ name: 'password', nullable: false })
     password: string;
 
-    @Column({ name: 'harem_name'})
-    haremName: string;
-
-    @Column({ name: 'harem_qtd'})
-    haremQTD: number;
-    
-    @Column({ name: 'kakera_reacted'})
-    kakeraReacted: number;
-   
-    @Column({ name: 'kakera'})
-    kakera: number;
-
     @Column({ name: 'mudae_active', nullable: false })
-    mudaeActive: boolean;    
+    mudaeActive: boolean;
 
     // Seção de Registro de criação e alteração do Usuário
     @CreateDateColumn({ name: 'created_at'})
